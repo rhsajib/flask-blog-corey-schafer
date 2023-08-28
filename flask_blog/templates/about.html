@@ -1,0 +1,18 @@
+{% block title %}
+    Home
+{% endblock title %}
+
+
+{% block content %}
+    <div class="d-flex row justify-content-center">
+        <div class="col-6 my-5 mx-2 p-3">
+            {% for post in posts %}
+                <div class="bg-body-tertiary border border-info rounded-4 shadow mb-5 p-3">
+                    <h2>Title: {{ post.title }}</h2>
+                    <p>Author: {{ post.author}}</p>
+                    <p>Content: {{ post.content}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
